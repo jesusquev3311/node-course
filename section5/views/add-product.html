@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <title>Add Product</title>
 </head>
 <body>
     <header>
-        <nav class="bg-gray-800">
-            <ul class="relative flex items-center justify-between h-16">
-                <li><a href="/" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Shop</a></li>
-                <li><a href="/admin/add-product" class="bg-gray-900 text-white px-3 py-2 rounded-md text-sm font-medium" aria-current="page">Add Product</a></li>
+        <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+            <ul class="navbar-menu">
+                <li class="navbar-item"><a href="/" class="navbar-link">Shop</a></li>
+                <li class="navbar-item"><a href="/admin/add-product" class="navbar-link">Add Product</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container mx-auto">
+    <main class="container">
+        <h1 class="title is-1 mt-3">Add Product</h1>
+
         <form action="/add-product" method="POST">
-            <input type="text" name="title">
-            <button type="submit">Send</button>
+            <div class="field has-addons">
+                <div class="control">
+                    <input class="input" type="text" placeholder="Add a product">
+                </div>
+                <div class="control">
+                    <button type="submit" class="button is-info">
+                        Add
+                    </button>
+                </div>
+            </div>
         </form>
     </main>
 </body>
